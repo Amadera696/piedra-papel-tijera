@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Piedra papel o tijera</title>
+</head>
+<body>
+  <div class="game">
+    <h1>Piedra, Papel, Tijera</h1>
+    <img src="img/imagenppt.jpg" alt="Imagen relacionada al juego">
+    <div class="players">
+      <div class="player">
+        <h2>Jugador 1</h2>
+        <div class="options">
+          <button class="option" onclick="play(1, 'piedra')">Piedra</button>
+          <button class="option" onclick="play(1, 'papel')">Papel</button>
+          <button class="option" onclick="play(1, 'tijera')">Tijera</button>
+        </div>
+        <p id="result1">Resultado: Esperando...</p>
+      </div>
+      <div class="player">
+        <h2>Jugador 2</h2>
+        <div class="options">
+          <button class="option" onclick="play(2, 'piedra')">Piedra</button>
+          <button class="option" onclick="play(2, 'papel')">Papel</button>
+          <button class="option" onclick="play(2, 'tijera')">Tijera</button>
+        </div>
+        <p id="result2">Resultado: Esperando...</p>
+      </div>
+    </div>
+    <p id="winner">Ganador: </p>
+    <p id="loser">Perdedor: </p>
+  
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
