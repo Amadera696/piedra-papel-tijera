@@ -32,8 +32,8 @@ function play(playerIndex, playerChoice) {
     document.getElementById("congratulations-modal").classList.add("active");
     
     // Mostrar las elecciones de los jugadores en el aviso modal
-    document.getElementById("player1-choice").textContent = "Jugador 1: " + playerChoices[0] + " (" + playerChoice + ")";
-    document.getElementById("player2-choice").textContent = "Jugador 2: " + playerChoices[1] + " (" + playerChoices[1] + ")";
+    document.getElementById("player1-choice").textContent = "Jugador 1: " + playerChoices[0];
+    document.getElementById("player2-choice").textContent = "Jugador 2: " + playerChoices[1];
     document.getElementById("result" + playerIndex).textContent = "Resultado: " + resultMessage;
     document.getElementById("result" + (3 - playerIndex)).textContent = "Resultado: " + playerNames[2 - playerIndex] + ": " + computerChoice;
     document.getElementById("winner").textContent = "Ganador: " + playerNames[results.indexOf("Ganador")];
