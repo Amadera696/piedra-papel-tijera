@@ -30,10 +30,16 @@
         <p id="result2">Resultado: Esperando...</p>
       </div>
     </div>
-    <p id="winner">Ganador: </p>
-    <p id="loser">Perdedor: </p>
-  
-  </div>
+   
+    <div id="congratulations-modal" class="modal">
+      <div class="modal-content">
+        <p id="aviso">¡Buen juego!</p>
+        <p id="winner">Ganador: </p>
+        <p id="loser">Perdedor: </p>
+     <button onclick="resetGame()" id="Volver">Volver a jugar</button>
+      </div>
+    </div>
+ 
   <script src="game.js"></script>
 </body>
 </html>

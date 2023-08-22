@@ -23,8 +23,24 @@ function play(playerIndex, playerChoice) {
     results[playerIndex - 1] = "Perdedor";
   }
 
-  document.getElementById("result" + playerIndex).textContent = "Resultado: " + resultMessage;
-  document.getElementById("result" + (3 - playerIndex)).textContent = "Resultado: " + playerNames[2 - playerIndex] + ": " + computerChoice;
-  document.getElementById("winner").textContent = "Ganador: " + playerNames[results.indexOf("Ganador")];
-  document.getElementById("loser").textContent = "Perdedor: " + playerNames[results.indexOf("Perdedor")];
+
+  if (results.indexOf("Ganador") !== -1) {
+    // Mostrar el aviso 
+    document.getElementById("congratulations-modal").classList.add("active");
+    document.getElementById("result" + playerIndex).textContent = "Resultado: " + resultMessage;
+    document.getElementById("result" + (3 - playerIndex)).textContent = "Resultado: " + playerNames[2 - playerIndex] + ": " + computerChoice;
+    document.getElementById("winner").textContent = "Ganador: " + playerNames[results.indexOf("Ganador")];
+    document.getElementById("loser").textContent = "Perdedor: " + playerNames[results.indexOf("Perdedor")];
+    
+  }
 }
+function resetGame() {
+    results = ["", ""];
+    document.getElementById("result1").textContent = "Resultado: Esperando...";
+    document.getElementById("result2").textContent = "Resultado: Esperando...";
+    document.getElementById("winner").textContent = "Ganador: ";
+    document.getElementById("loser").textContent = "Perdedor: ";
+  
+    // Ocultar el aviso modal
+    document.getElementById("congratulations-modal").classList.remove("active");
+  }
